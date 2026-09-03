@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f3eee4" />
+  <title>KrushiDrishti — Farmer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="app-head">
+      <a class="brand" href="./">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1B5E38"/>
+          <path fill="#F4EFE6" d="M7 8.2h3.1v6.2h3.6V8.2h3.1v15.6h-3.1V17H10.1v6.8H7V8.2zm12.4 1.9c2.05 0 3.4.85 4.05 2.15l-2.35 1.2c-.3-.55-.9-.9-1.7-.9-1.15 0-1.95.85-1.95 2.45s.8 2.45 1.95 2.45c.85 0 1.45-.4 1.75-1l2.4 1.15c-.7 1.4-2.1 2.3-4.15 2.3-3.15 0-5.2-2.2-5.2-5.9 0-3.7 2.1-5.9 5.2-5.9z"/>
+        </svg>
+        KrushiDrishti
+      </a>
+      <span class="page-tag">Farmer</span>
+    </header>
+
+    <section class="ops-strip" aria-label="Nashik field conditions">
+      <div class="strip-item"><span class="k">Location</span><span id="wxPlace" class="v">Nashik</span></div>
+      <div class="strip-item"><span class="k">Temp</span><span id="wxTemp" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Humidity</span><span id="wxHumidity" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Leaf wetness</span><span id="wxWet" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Rain chance</span><span id="wxRain" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Spray window</span><span id="wxSpray" class="v">—</span></div>
+    </section>
+
+    <header class="lede">
+      <h1>Leaf check</h1>
+      <p>Photo stays on this phone. Model runs on-device.</p>
+    </header>
+
+    <p id="status" class="status" role="status">Loading model…</p>
+
+    <section id="result" hidden aria-live="polite">
+      <p id="label" class="sr-only"></p>
+      <p id="confidence" class="sr-only"></p>
+      <article id="hero" class="hero" hidden>
+        <p class="hero-kicker" id="heroKicker">Outbreak pressure</p>
+        <h2 id="heroTitle"></h2>
+        <div class="hero-split">
+          <div><span class="k">Now</span><strong id="heroNow"></strong></div>
+          <div><span class="k">48 hours</span><strong id="hero48"></strong></div>
+        </div>
+        <div class="week" id="weekBar" aria-hidden="true"></div>
+        <div class="week-days" id="weekDays"></div>
+      </article>
+      <p id="retry" class="retry" hidden>Take photo again</p>
+      <article id="advisory" class="card advisory" hidden>
+        <h2>Advisory</h2>
+        <p><span class="k">First action</span> <span id="advAction"></span></p>
+        <p><span class="k">Wait days</span> <span id="advWait"></span></p>
+        <p id="advMarathi" class="marathi" lang="mr"></p>
+        <button id="reviewBtn" class="review" type="button">Review treatment</button>
+        <div id="ipmCards" class="ipm-cards" hidden></div>
+        <p id="reportNote" hidden></p>
+      </article>
+      <button id="sendOfficerBtn" type="button" hidden>Send to officer</button>
+      <span id="advName" hidden></span>
+    </section>
+
+    <section class="card scan-card">
+      <div class="preview-wrap">
+        <img id="preview" class="preview" alt="Selected leaf photo" hidden />
+        <div id="cameraPanel" class="camera-panel" hidden>
+          <video id="cameraVideo" autoplay playsinline muted></video>
+          <div class="camera-actions">
+            <button id="snapBtn" type="button">Capture</button>
+            <button id="closeCameraBtn" type="button" class="secondary">Close</button>
+          </div>
+        </div>
+        <p id="placeholder" class="placeholder">No photo yet</p>
+      </div>
+      <div class="actions">
+        <button id="uploadBtn" type="button" disabled>Upload photo</button>
+        <button id="cameraBtn" type="button" class="secondary" disabled>Camera</button>
+      </div>
+    </section>
+
+    <input id="fileInput" type="file" accept="image/*" hidden />
+    <input id="cameraInput" type="file" accept="image/*" capture="environment" hidden />
+  </main>
+
+  <nav class="tabbar" aria-label="Primary">
+    <a href="./" data-route="farmer">Farmer</a>
+    <a href="officer/" data-route="officer">Queue</a>
+    <a href="dashboard/" data-route="dashboard">Map</a>
+  </nav>
+
+  <script src="shared.js"></script>
+  <script src="weather.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

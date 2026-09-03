@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f3eee4" />
+  <base href="../" />
+  <title>KrushiDrishti — Outbreak queue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page wide">
+    <header class="app-head">
+      <a class="brand" href="./">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1B5E38"/>
+          <path fill="#F4EFE6" d="M7 8.2h3.1v6.2h3.6V8.2h3.1v15.6h-3.1V17H10.1v6.8H7V8.2zm12.4 1.9c2.05 0 3.4.85 4.05 2.15l-2.35 1.2c-.3-.55-.9-.9-1.7-.9-1.15 0-1.95.85-1.95 2.45s.8 2.45 1.95 2.45c.85 0 1.45-.4 1.75-1l2.4 1.15c-.7 1.4-2.1 2.3-4.15 2.3-3.15 0-5.2-2.2-5.2-5.9 0-3.7 2.1-5.9 5.2-5.9z"/>
+        </svg>
+        KrushiDrishti
+      </a>
+      <span class="page-tag">Officer</span>
+    </header>
+
+    <section class="ops-strip" aria-label="Nashik field conditions">
+      <div class="strip-item"><span class="k">Location</span><span id="wxPlace" class="v">Nashik</span></div>
+      <div class="strip-item"><span class="k">Temp</span><span id="wxTemp" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Humidity</span><span id="wxHumidity" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Leaf wetness</span><span id="wxWet" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Rain chance</span><span id="wxRain" class="v">—</span></div>
+      <div class="strip-item"><span class="k">Spray window</span><span id="wxSpray" class="v">—</span></div>
+    </section>
+
+    <header class="lede">
+      <h1>Outbreak queue</h1>
+      <p>Confirm or reject field reports. Saved on this device.</p>
+    </header>
+
+    <div class="filters" role="tablist" aria-label="Filter queue">
+      <button type="button" data-filter="all">All</button>
+      <button type="button" class="secondary" data-filter="severe">Severe</button>
+      <button type="button" class="secondary" data-filter="high">High</button>
+      <button type="button" class="secondary" data-filter="moderate">Moderate</button>
+    </div>
+
+    <section id="reportList" class="queue" aria-live="polite"></section>
+  </main>
+
+  <nav class="tabbar" aria-label="Primary">
+    <a href="farmer/" data-route="farmer">Farmer</a>
+    <a href="officer/" data-route="officer">Queue</a>
+    <a href="dashboard/" data-route="dashboard">Map</a>
+  </nav>
+
+  <script src="shared.js"></script>
+  <script src="weather.js"></script>
+  <script src="officer.js"></script>
+</body>
+</html>

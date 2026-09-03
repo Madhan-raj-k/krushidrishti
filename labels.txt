@@ -1,0 +1,6 @@
+0 grape_black_rot
+1 grape_healthy
+2 tomato_early_blight
+3 Potato___Early_blight
+4 Corn_(maize)___Common_rust_
+5 bad_photo

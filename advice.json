@@ -1,0 +1,98 @@
+{
+  "grape_black_rot": {
+    "name": "Grape black rot",
+    "firstAction": "Pick off infected leaves and berries and take them away from the vines.",
+    "waitDays": 7,
+    "marathi": "संक्रमित पाने व मण्यांची तोडणी करून बागेबाहेर न्या.",
+    "cards": [
+      {
+        "title": "Sanitation",
+        "text": "Remove mummified berries, spotted leaves, and fallen fruit. Do not compost them near the vineyard."
+      },
+      {
+        "title": "Canopy",
+        "text": "Thin crowded shoots so leaves dry faster after dew or rain. Black rot spreads on wet foliage."
+      },
+      {
+        "title": "Wait window",
+        "text": "Scout again after 7 days before any further spray. Repeat removal if new spots appear."
+      }
+    ]
+  },
+  "tomato_early_blight": {
+    "name": "Tomato early blight",
+    "firstAction": "Remove lower spotted leaves and water the soil, not the leaves.",
+    "waitDays": 7,
+    "marathi": "खालची ठिपके असलेली पाने काढा. मुळाशी पाणी द्या, पानांवर नाही.",
+    "cards": [
+      {
+        "title": "Leaf removal",
+        "text": "Pinch off lower leaves that touch soil or show target-spot rings. Bag them away from the plot."
+      },
+      {
+        "title": "Watering",
+        "text": "Water at the base in the morning. Wet leaves overnight let early blight spread."
+      },
+      {
+        "title": "Wait window",
+        "text": "Check new growth after 7 days. Keep mulch under plants to stop soil splash."
+      }
+    ]
+  },
+  "Potato___Early_blight": {
+    "name": "Potato early blight",
+    "firstAction": "Remove blighted leaflets and keep irrigation off the foliage.",
+    "waitDays": 7,
+    "marathi": "डाग असलेली पाने काढा. पानांवर पाणी टाकू नका.",
+    "cards": [
+      {
+        "title": "Sanitation",
+        "text": "Pull yellow leaves with dark concentric spots. Keep them out of the potato rows."
+      },
+      {
+        "title": "Irrigation",
+        "text": "Use furrow or drip water. Avoid overhead sprays in the evening."
+      },
+      {
+        "title": "Wait window",
+        "text": "Walk the field again after 7 days and remove any new lesions before they reach stems."
+      }
+    ]
+  },
+  "Corn_(maize)___Common_rust_": {
+    "name": "Maize common rust",
+    "firstAction": "Remove the most rusted leaves and avoid walking the crop while it is wet.",
+    "waitDays": 7,
+    "marathi": "तांबेरा असलेली पाने काढा. ओल्या पिकात फिरू नका.",
+    "cards": [
+      {
+        "title": "Scout",
+        "text": "Look for cinnamon pustules on both sides of the leaf. Start with the most affected plants."
+      },
+      {
+        "title": "Airflow",
+        "text": "Do not add plants into already dense stands. Rust needs long leaf wetness."
+      },
+      {
+        "title": "Wait window",
+        "text": "Recheck after 7 days. If pustules are still spreading up the plant, ask the officer for a spray plan."
+      }
+    ]
+  },
+  "grape_healthy": {
+    "name": "Grape — no disease found",
+    "firstAction": "Keep routine scouting. No spray is needed from this photo.",
+    "waitDays": 7,
+    "marathi": "पीक निरोगी दिसते. नियमित तपासणी सुरू ठेवा. फवारणीची गरज नाही.",
+    "cards": [
+      {
+        "title": "Keep watch",
+        "text": "Walk the vines once a week, especially after rain or long dew."
+      },
+      {
+        "title": "Hygiene",
+        "text": "Clear old bunches and leaves from the trellis so infection has nowhere to sit."
+      }
+    ]
+  }
+}
