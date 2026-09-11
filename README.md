@@ -63,8 +63,8 @@ style.css           Shared styles
 - [x] Live demo URL
 - [ ] README (this PR)
 - [ ] Short demo GIF — [#1](https://github.com/Madhan-raj-k/krushidrishti/issues/1)
-- [ ] Open-source license — [#2](https://github.com/Madhan-raj-k/krushidrishti/issues/2)
+- [x] Open-source license — [#2](https://github.com/Madhan-raj-k/krushidrishti/issues/2)
 
 ## License
 
-License TBD — see [#2](https://github.com/Madhan-raj-k/krushidrishti/issues/2).
+MIT — see [`LICENSE`](LICENSE).
