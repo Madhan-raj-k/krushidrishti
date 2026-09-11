@@ -4,7 +4,9 @@ On-device crop leaf checks for farmers, an officer outbreak queue, and a Maharas
 
 **Live demo:** [krushidrishti.vercel.app](https://krushidrishti.vercel.app)
 
-> Demo GIF of the farmer leaf-check flow is tracked in [#1](https://github.com/Madhan-raj-k/krushidrishti/issues/1) (`docs/demo.gif` once added).
+![KrushiDrishti demo — farmer result, officer queue, Maharashtra board](docs/demo.gif)
+
+Farmer leaf check → officer outbreak queue → Maharashtra board (captured from the live demo).
 
 ## What it does
 
@@ -62,7 +64,7 @@ style.css           Shared styles
 - [x] Public repo
 - [x] Live demo URL
 - [ ] README (this PR)
-- [ ] Short demo GIF — [#1](https://github.com/Madhan-raj-k/krushidrishti/issues/1)
+- [x] Short demo GIF — [#1](https://github.com/Madhan-raj-k/krushidrishti/issues/1)
 - [x] Open-source license — [#2](https://github.com/Madhan-raj-k/krushidrishti/issues/2)
 
 ## License
